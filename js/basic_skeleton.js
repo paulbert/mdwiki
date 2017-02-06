@@ -32,6 +32,7 @@
 
         $pageTitle = $('#md-content h1').eq(0);
         if ($.trim($pageTitle.toptext()).length > 0) {
+			$('title').text($pageTitle.text);
             $('#md-title').prepend($pageTitle);
             var title = $pageTitle.toptext();
             // document.title = title;
