@@ -8,6 +8,7 @@
             groupImages();
             removeBreaks();
             addInpageAnchors ();
+			externalLinksTargetBlank();
 
             $.md.stage('all_ready').subscribe(function(done) {
                 if ($.md.inPageAnchor !== '') {
@@ -32,7 +33,7 @@
 
         $pageTitle = $('#md-content h1').eq(0);
         if ($.trim($pageTitle.toptext()).length > 0) {
-			$('title').text($pageTitle.text);
+			$('title').text($pageTitle.text());
             $('#md-title').prepend($pageTitle);
             var title = $pageTitle.toptext();
             // document.title = title;
@@ -226,6 +227,23 @@
             addJumpLinkToTOC($heading);
         });
     }
+	
+	function externalLinksTargetBlank () {
+		$("a[href^='http://']").each(
+			function(){
+				if(this.href.indexOf(location.hostname) === -1) {
+					$(this).attr('target', '_blank');
+				}
+		});
+         
+		$("a[href^='https://']").each(
+			function(){
+				if(this.href.indexOf(location.hostname) === -1) {
+					$(this).attr('target', '_blank');
+				}
+		});
+		
+	}
 
     $.md.scrollToInPageAnchor = function(anchortext) {
         if (anchortext.startsWith ('#'))

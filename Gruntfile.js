@@ -33,7 +33,6 @@ module.exports = function(grunt) {
             'js/basic_skeleton.js',
             'js/bootstrap.js',
             'js/gimmicker.js',
-			'js/externalLinks.js',
 
             // gimmicks
             'js/gimmicks/alerts.js',
