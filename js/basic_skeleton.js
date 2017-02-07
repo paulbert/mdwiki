@@ -231,14 +231,14 @@
 	function externalLinksTargetBlank () {
 		$("a[href^='http://']").each(
 			function(){
-				if(this.href.indexOf(location.hostname) === -1) {
+				if(this.href.indexOf(location.hostname) === -1  || location.hostname === '') {
 					$(this).attr('target', '_blank');
 				}
 		});
          
 		$("a[href^='https://']").each(
 			function(){
-				if(this.href.indexOf(location.hostname) === -1) {
+				if(this.href.indexOf(location.hostname) === -1 || location.hostname === '') {
 					$(this).attr('target', '_blank');
 				}
 		});
