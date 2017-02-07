@@ -1,6 +1,12 @@
 [![Build Status](https://travis-ci.org/Dynalon/mdwiki.png?branch=master)](https://travis-ci.org/Dynalon/mdwiki)
 
-This is a modified version of MDwiki that has the flatly theme for Bootstrap in the mdwiki.html file inline rather than the default theme in the 0.6.x branch.
+This is a modified version of MDwiki with changes to the 0.6.x branch.
+
+## Differences from main repo
+* The flatly theme for Bootstrap is the main theme rather than the default, allowing the flatly theme to be used offline.  The default Bootstrap theme can be chosen in navigation.md with 'classic'
+* Added a function to basic_skeleton.js which adds target="\_blank" to any links to external domains
+* Adds a line to the setPageTitle function which will set the text of the title tag to the text of the opening h1 tag of the page if found.
+
 
 MDwiki
 ======
