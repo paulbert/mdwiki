@@ -8,6 +8,7 @@ This is a modified version of MDwiki for the Open Learning Exchange with changes
 * Adds a line to the setPageTitle function which will set the text of the title tag to the text of the opening h1 tag of the page if found.
 * Adds OLE logo in upper left.
 * Includes added styles for offline use of the Lato font.
+* Changes favicon from a favicon.png to favicon.ico file in the base directory.
 
 MDwiki
 ======
