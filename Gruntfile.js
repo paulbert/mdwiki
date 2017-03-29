@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         // files that we inline in the fat release (basically everything)
         // ONLY PUT ALREADY MINIFIED FILES IN HERE!
         externalJsFiles: [
-            'extlib/js/jquery-1.8.3.min.js',
+            'extlib/js/jquery-3.2.0.min.js',
             'extlib/js/bootstrap-3.0.0.min.js',
             'extlib/js/highlight-7.3.pack.min.js'
         ],
