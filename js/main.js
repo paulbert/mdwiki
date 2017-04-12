@@ -406,7 +406,7 @@
         if(href.startsWith('/')) {
             // prevent cross-domain inclusions to prevent possible XSS
             href = "/./" + href;
-        } else {
+        } else if(!href.startsWith('./')) {
             href = "./" + href;
         }
         $.md.mainHref = href;
