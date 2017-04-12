@@ -36,21 +36,14 @@ How to build from source
 
     npm install
 
-4. Install components
-
-    bower install
-
-    (or if not installed globally)
-    ./node_modules/.bin/bower install
-
-5. Build MDwiki
+4. Build MDwiki
 
     grunt release
 
     (or if not installed globally)
     ./node_modules/.bin/grunt release
 
-6. Find the `mdwiki.html` in the `release/` and `dist/` folder
+5. Find the `mdwiki.html` in the `release/` and `dist/` folder
 
 
 
