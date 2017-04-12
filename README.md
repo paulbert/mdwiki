@@ -12,6 +12,7 @@ This is a modified version of MDwiki for the Open Learning Exchange with changes
 * Modifies script to prevent XSS so it only adds `./` to the front of links once.
 * Highlight.js crashes when included inline, so it is included as a local reference in a script tag.  Requires `highlight-7.3.pack.min.js` file in an `extlib/js/` directory of the wiki.
 * Sets width of the side navigation menu with css rather than javascript.
+* Uses jQuery 3.2.0 and Colorbox 1.6.4
 
 MDwiki
 ======
