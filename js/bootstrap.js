@@ -254,16 +254,7 @@
         $('#md-content').addClass ('col-md-9');
         $('#md-content-row').prepend('<div class="col-md-3" id="md-left-column"/>');
 
-        var recalc_width = function () {
-            // if the page menu is affixed, it is not a child of the
-            // <md-left-column> anymore and therefore does not inherit
-            // its width. On every resize, change the class accordingly
-            var width_left_column = $('#md-left-column').css('width');
-            $('#md-page-menu').css('width', width_left_column);
-        };
-
         $(window).scroll(function() {
-            recalc_width($('#md-page-menu'));
             var $first;
             $('*.md-inpage-anchor').each(function(i,e) {
                 if ($first === undefined) {
@@ -318,7 +309,6 @@
         });
 
         $(window).resize(function () {
-            recalc_width($('#md-page-menu'));
             check_offset_to_navbar();
         });
         $.md.stage('postgimmick').subscribe(function (done) {
