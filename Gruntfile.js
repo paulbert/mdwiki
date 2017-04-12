@@ -69,7 +69,8 @@ module.exports = function(grunt) {
         externalJsFiles: [
             'extlib/js/jquery-3.2.0.min.js',
             'extlib/js/bootstrap-3.0.0.min.js',
-            'extlib/js/highlight-7.3.pack.min.js'
+			// Highlight.js crashes when included inline.  Included script tag in index.tmpl for usage.
+            //'extlib/js/highlight-7.3.min.js'
         ],
         externalCssFiles: [
             'extlib/css/highlight.github.css',
