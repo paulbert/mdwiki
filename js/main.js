@@ -405,7 +405,8 @@
     function loadContent(href) {
         if(href.startsWith('/')) {
             // prevent cross-domain inclusions to prevent possible XSS
-            href = "/./" + href;
+            // paulbert: added check to make sure ./ isn't added every time
+            href = href.startsWith('/./') href ? '/./' + href;
         } else if(!href.startsWith('./')) {
             href = "./" + href;
         }
